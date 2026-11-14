@@ -1,0 +1,13 @@
+.env
+*.db
+*.sqlite
+backend/.venv/
+backend/uploads/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+node_modules/
+dist/
+.DS_Store
