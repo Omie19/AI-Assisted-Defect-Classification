@@ -79,8 +79,17 @@ API docs: http://localhost:8000/docs
 ```bash
 cd frontend
 npm install
+cp .env.example .env
 npm run dev
 ```
+
+Set the demo user ID in `frontend/.env`:
+
+```env
+VITE_DEFAULT_USER_ID=L040223
+```
+
+Use `L040223` for Priya Singh (Quality Engineer) or `L040224` for Alex Morgan (Production Supervisor). This ID selects a seeded demo profile; it is not a secret. Restart the Vite server after changing it.
 
 Open http://localhost:5173.
 
