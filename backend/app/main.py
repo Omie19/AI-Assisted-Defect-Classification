@@ -93,7 +93,7 @@ def health():
     return {"status": "ok"}
 
 
-@app.get("/api/users/me", response_model=UserOut)
+@app.get("/api/users/me", response_model=UserOut, include_in_schema=False)
 def get_current_user(user=Depends(current_user)):
     """Return the complete UI profile for the supplied X-User-Id."""
     return user
