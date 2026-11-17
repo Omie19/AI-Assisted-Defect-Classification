@@ -6,7 +6,9 @@ run:
 	cd backend && uvicorn app.main:app --reload
 
 test:
-	cd backend && python -m pytest -q
+	@if [ -x backend/.venv/bin/python ]; then cd backend && .venv/bin/python -m pytest -q; \
+	elif [ -x backend/venv/bin/python ]; then cd backend && venv/bin/python -m pytest -q; \
+	else echo "Create backend/.venv or backend/venv with Python 3.11+ first."; exit 1; fi
 	cd frontend && npm test
 lint:
 	cd backend && ruff check app tests && ruff format --check app tests
