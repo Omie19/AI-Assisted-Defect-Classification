@@ -64,6 +64,7 @@ Put your API key in `backend/.env`:
 ```env
 OPENAI_API_KEY=your_api_key_here
 OPENAI_MODEL=gpt-4.1-mini
+DATABASE_URL=your_database_url
 ```
 
 Never put the API key in frontend code or commit `.env`. Then start the API:
